@@ -30,7 +30,7 @@
   text-transform: uppercase;
   z-index: 16;
   transition: color 0.3s ease;
-  animation: slideDownText 1.5s ease-out forwards;
+  animation: slideDownText 1.5s 0.5s ease-out forwards;
 }
 
 @keyframes slideDownText {
@@ -128,6 +128,8 @@
 .color-buttons {
   z-index: 15;
   opacity: 0;
+  padding: 5px 5px 0;
+  margin-bottom: -0.7%;
   transform: translateY(20px);
   animation: showButton 1s 2.8s forwards;
 }
@@ -201,9 +203,5 @@
 
   .color-buttons {
     margin: 1.5rem 0;
-  }
-
-  .carouselMD {
-    /* padding-bottom: 20px; */
   }
 }

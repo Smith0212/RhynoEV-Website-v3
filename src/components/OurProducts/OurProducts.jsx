@@ -85,8 +85,8 @@ const OurProducts = () => {
     };
 
     const handleCheckout = (to) => {
-        navigate(to);
         window.scrollTo(0, 0);
+        navigate(to);
     };
 
     useEffect(() => {
@@ -189,7 +189,7 @@ const OurProducts = () => {
                                     ))}
                                 </div>
                                 <div className="checkout">
-                                    <button onClick={() => handleCheckout(product.nevigatTo)}>CHECKOUT</button>
+                                    <button onClick={() => handleCheckout(products.nevigatTo)}>CHECKOUT</button>
                                 </div>
                             </div>
                         </div>

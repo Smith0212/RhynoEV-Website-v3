@@ -1,0 +1,61 @@
+.custom-bike-layout {
+    /* background-color: black; */
+    color: white;
+    text-align: center;
+    padding: 20px;
+    margin: 15vh 0;
+  }
+  
+  .custom-top-section {
+    display: flex;
+    justify-content: space-between;
+    margin-bottom: 20px;
+  }
+  
+  .custom-image-container {
+    flex: 1;
+    /* margin: 0 10px; */
+  }
+  
+  .custom-top-image {
+    width: 100%;
+    height: auto;
+  }
+  
+  .custom-description-text {
+    font-size: 0.8em;
+    margin-top: 3vh;
+  }
+  
+  .custom-bike-row {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  }
+  
+  .custom-bike-image {
+    width: 100%;
+    height: auto;
+  }
+  
+  /* Responsiveness */
+  @media (max-width: 768px) {
+    .custom-bike-layout {
+      margin: 10vh 0 0;
+    }
+
+    .custom-top-section {
+      flex-direction: column;
+      align-items: center;
+    }
+  
+    .custom-image-container {
+      margin: 10px 0;
+    }
+  
+    .custom-description-text {
+      font-size: 1em;
+      margin-bottom: 20px;
+    }
+  }
+  
