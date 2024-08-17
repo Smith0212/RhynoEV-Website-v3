@@ -18,6 +18,10 @@ import Img11 from '../assets/pics/blue/side.75.png';
 import Img12 from '../assets/bf.png'
 
 import Modelpage_L1 from '../components/Modelpage_L1/Modelpage_L1';
+import Modelpage_L2 from '../components/Modelpage_L2/Modelpage_L2';
+import Modelpage_L3 from '../components/Modelpage_L3/Modelpage_L3';
+import Modelpage_L4 from '../components/Modelpage_L4/Modelpage_L4';
+
 
 const SE03LITE = () => {
   // const mainImgsByColor = {
@@ -54,6 +58,24 @@ const SE03LITE = () => {
   // };
   // const maxSpeed = '55 KM/H';
 
+
+
+  const rhynoSpecLite = [
+    { specification: 'Warranty on electronics', value: '1 year' },
+    { specification: 'Battery', value: '1.8kWh' },
+    { specification: 'Battery features', value: 'LFP with 1500 cycles Active Balancing Waterproof (IP67)' },
+    { specification: 'Battery warranty', value: '3 years' },
+    { specification: 'Charging time', value: '3 hours (12A)' },
+    { specification: 'Motor', value: '1500W' },
+    { specification: 'Max speed', value: '55 km/h' },
+    { specification: 'Max range (@30km/h)', value: '100 km' },
+    { specification: 'Max range (@45km/h)', value: '90 km' },
+    { specification: 'Max range (@full speed)', value: '60 km' },
+    { specification: 'Other key benefits', value: 'Fire-safe Battery Range prediction Comfortable ride Stable and safe' },
+  ];
+
+
+
   return (
     <div>
       {/* <Prodland/> */}
@@ -68,7 +90,11 @@ const SE03LITE = () => {
       /> */}
 
       <Modelpage_L1 startState={2} />
-      <Spec w="1500W" tops="55" range="100" battery="1.8" imges={Img12} />
+      <Modelpage_L2 />
+      <Modelpage_L3 specifications={rhynoSpecLite} />
+      <Modelpage_L4 />
+      
+      {/* <Spec w="1500W" tops="55" range="100" battery="1.8" imges={Img12} /> */}
     </div>
   )
 }

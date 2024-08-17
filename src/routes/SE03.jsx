@@ -1,4 +1,6 @@
 import React from 'react';
+import { useEffect } from 'react';
+import { useLocation } from 'react-router-dom';
 import Prodland from '../components/prodland/Prodland';
 import Spec from '../components/specs/Specs';
 import ColorPicker from '../components/colorpicker/ColorPicker';
@@ -18,6 +20,9 @@ import Img11 from '../assets/pics/blue/side.75.png';
 import Img12 from '../assets/bf.png'
 
 import Modelpage_L1 from '../components/Modelpage_L1/Modelpage_L1';
+import Modelpage_L2 from '../components/Modelpage_L2/Modelpage_L2';
+import Modelpage_L3 from '../components/Modelpage_L3/Modelpage_L3';
+import Modelpage_L4 from '../components/Modelpage_L4/Modelpage_L4';
 
 
 
@@ -57,6 +62,35 @@ const SE03 = () => {
   // };
   // const maxSpeed = '55 KM/H';
 
+
+
+  const rhynoSpec = [
+    { specification: 'Warranty on electronics', value: '1 year' },
+    { specification: 'Battery', value: '1.8kWh' },
+    { specification: 'Battery features', value: 'LFP with 1500 cycles Active Balancing Waterproof (IP67)' },
+    { specification: 'Battery warranty', value: '3 years' },
+    { specification: 'Charging time', value: '3 hours (12A)' },
+    { specification: 'Motor', value: '1500W' },
+    { specification: 'Max speed', value: '55 km/h' },
+    { specification: 'Max range (@30km/h)', value: '100 km' },
+    { specification: 'Max range (@45km/h)', value: '90 km' },
+    { specification: 'Max range (@full speed)', value: '60 km' },
+    { specification: 'Other key benefits', value: 'Fire-safe Battery Range prediction Comfortable ride Stable and safe' },
+  ];
+
+  const { state } = useLocation();
+
+  useEffect(() => {
+      if (state?.scrollToTop) {
+          // Scroll to top of the page without triggering the scroll-based animations
+          document.documentElement.scrollTop = 0;  // For modern browsers
+          document.body.scrollTop = 0;  // For older browsers
+      }
+  }, [state]);
+  
+
+
+
   return (
     <div>
       {/* <Prodland/> */}
@@ -71,9 +105,14 @@ const SE03 = () => {
       /> */}
 
       <Modelpage_L1 startState={3} />
-      <Spec 
+      <Modelpage_L2 />
+      <Modelpage_L3 specifications={rhynoSpec} />
+      <Modelpage_L4 /> 
+
+
+      {/* <Spec 
         w="1500W" tops="55" range="150" battery="2.7" imges={Img12}
-      />
+      /> */}
     </div>
   );
 };
