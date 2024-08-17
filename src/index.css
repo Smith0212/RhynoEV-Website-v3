@@ -1,0 +1,197 @@
+/* Font family imported */
+@import url('https://fonts.googleapis.com/css2?family=Lato:ital,wght@0,100;0,300;0,400;0,700;0,900;1,100;1,300;1,400;1,700;1,900&family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap');
+
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+/* Root */
+:root {
+  /* Colors */
+  --dark-grey: #474747ee;
+  --light-grey: #bababa;
+  --black: #252525;
+  --white: #FFFFFF;
+  --yellow: #F9ED32;
+  --yellow-hover: #ffee00;
+
+  /* Font declaration */
+  --lato: "Lato", sans-serif;
+  --poppins: "Poppins", sans-serif;
+  --calibri: "Calibri", sans-serif;
+
+  /* Font Sizes */
+  --mega: clamp(2.2rem, 8vw, 3.6rem);
+  --heading: clamp(2rem, 6vw, 3.2rem);
+  --medium: clamp(1.5rem, 4vw, 2.2rem);
+  --para: clamp(1rem, 3vw, 1.25rem);
+  --small: clamp(0.8rem, 2vw, 1.15rem);
+}
+
+* {
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
+  outline: none;
+  border: none;
+  text-decoration: none;
+  font-family: var(--poppins);
+  transition: all .2s linear;
+  scroll-behavior: smooth;
+  /* overflow-x: hidden; */
+  /* overflow-y: hidden; */
+}
+
+html{
+  scroll-behavior: smooth;
+/* most important - snap scrolling */
+  /* scroll-snap-type: y mandatory;
+  timeline-scope: --section, --div, --main; */
+}
+
+.btn {
+  margin-top: 20px;
+  width: max-content;
+  letter-spacing: 2px;
+  text-transform: uppercase;
+  font-weight: 600;
+  background: var(--yellow);
+  font-size: var(--small);
+  line-height: 1.4;
+  padding: .7rem 1.2rem;
+  border: none;
+  /* background: #bdc3c7; */
+  color: var(--black);
+  /* padding: 11px 12px 8px; */
+  /* line-height: 22px; */
+  text-decoration: none;
+  text-shadow: none;
+  border-radius: 3px;
+  cursor: pointer;
+  opacity: 0;
+  transform: translateY(-70%);
+  transition: opacity 0.5s ease, transform 0.5s;
+}
+
+.btn.animate {
+  opacity: 1;
+  transform: translateY(0);
+}
+
+
+.btn-nav {
+  font-weight: 550;
+  margin-top: 0;
+  padding: 0.4rem 1rem;
+}
+
+.btn22 {
+  position: fixed;
+  top: 85%;
+  left: 85%;
+  z-index: 999;
+  opacity: 0.2;
+  margin-top: 20px;
+  width: max-content;
+  letter-spacing: 2px;
+  text-transform: uppercase;
+  font-weight: 600;
+  background: var(--yellow);
+  font-size: var(--small);
+  line-height: 1.4;
+  padding: .7rem 1.2rem;
+  border: none;
+  /* background: #bdc3c7; */
+  color: var(--black);
+  /* padding: 11px 12px 8px; */
+  /* line-height: 22px; */
+  text-decoration: none;
+  text-shadow: none;
+  border-radius: 3px;
+  cursor: pointer;
+}
+
+.btn22:hover {
+  transition: 0.4s;
+  opacity: 1;
+}
+
+.btn22 a {
+  text-decoration: none;
+  color: var(--black);
+}
+
+.btn a {
+  text-decoration: none;
+  color: var(--black);
+}
+
+.vehicleinfo {
+  height: 100%;
+  margin: 4rem 0;
+}
+
+.spany {
+  color: var(--yellow);
+}
+
+body {
+  background-color: var(--black);
+  color: var(--white);
+}
+
+.mobilescreencomp {
+  display: none;
+}
+
+/* most important - snap scrolling */
+/* .snap-scroller-main{
+  scroll-snap-align: start;
+  scroll-snap-stop: always;
+  view-timeline: --section;
+  height: 100dvh;
+} */
+
+@media (max-width:1400px) {
+  .btn22 {
+    left: 80%;
+  }
+}
+
+@media (max-width:980px) {
+  .lapscreencomp {
+    display: none;
+  }
+
+  .mobilescreencomp {
+    display: block;
+  }
+}
+
+@media (max-width: 900px) {
+  .btn22 {
+    left: 78%;
+    top: 75%;
+  }
+}
+
+@media (max-width:630px) {
+  .btn22 {
+    left: 72%;
+    top: 85%;
+  }
+}
+
+@media (max-width:510px) {
+  .btn22 {
+    left: 68%;
+    top: 85%;
+  }
+}
+
+@media (max-width:462px) {
+  .btn22 {
+    left: 60%;
+    top: 80%;
+  }
+}

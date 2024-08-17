@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Future Scooter</title>
+    <link rel="stylesheet" href="./test.css">
+</head>
+
+<body>
+    <div class="container81" id="bike">
+        <div class="container81-content">
+            <h2>The BMW</h2>
+            <h1>G 310 R</h1>
+            <p>Lorem ipsum, dolor sit amet consectetur adipisicing elit. Maxime dignissimos voluptate consequuntur
+                necessitatibus est ut. Odio laudantium aut blanditiis nihil commodi, pariatur molestiae velit, nisi
+                dignissimos in nam cupiditate tempore!</p>
+            <h3>Choose your color</h3>
+            <div class="select-color">
+                <div id="red"></div>
+                <div id="blue"></div>
+                <div id="black"></div>
+            </div>
+        </div>
+    </div>
+    <script>
+        let redBtn = document.getElementById("red");
+        let blueBtn = document.getElementById("blue");
+        let blackBtn = document.getElementById("black");
+        let bike = document.getElementById("bike");
+
+        redBtn.onclick = function () {
+            bike.style.backgroundImage = "url(./src/assets/product7.png)";
+        }
+
+        blueBtn.onclick = function () {
+            bike.style.backgroundImage = "url(./src/assets/product6.png)";
+        }
+
+        blackBtn.onclick = function () {
+            bike.style.backgroundImage = "url(./src/assets/product8.png)";
+        }
+    </script>
+</body>
+</html>

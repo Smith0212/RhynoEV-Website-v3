@@ -1,0 +1,370 @@
+.footer-container {
+    font-family: Arial, sans-serif;
+    color: #fff;
+    margin: 10rem 0 0 0;
+    padding: 0;
+    width: 100%;
+}
+
+.contact-section {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 90vh;
+    background-image: url('../../assets/photo10.png');
+    background-size: cover;
+    background-position: center bottom;
+    position: relative;
+}
+
+.form-container {
+    background-color: rgba(0, 0, 0, 0.6);
+    padding: 20px;
+    width: 40%;
+    height: 90vh;
+    position: absolute;
+    left: 0;
+}
+
+.heading {
+    font-size: 24px;
+    /* margin-bottom: 20px; */
+    color: #ffcc00;
+    text-align: center;
+    /* margin-bottom: 2rem; */
+}
+
+.form {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: space-evenly;
+    overflow: auto;
+    /* gap: 1rem; */
+    height: 100%;
+}
+
+.form label {
+    width: 100%;
+    padding: 0 2rem;
+}
+
+.input,
+.textarea {
+    padding: 10px;
+    font-size: 16px;
+    border: none;
+    border-radius: 4px;
+    width: 100%;
+    margin-top: 0.2rem;
+}
+
+/* .textarea {
+    height: 100px;
+} */
+
+.button {
+    padding: 10px;
+    background-color: #ffcc00;
+    border: none;
+    color: #000;
+    font-size: 16px;
+    cursor: pointer;
+    border-radius: 4px;
+}
+
+.footer {
+    background-color: #252525;
+    padding: 50px 100px;
+}
+
+.footer a{
+    text-decoration: none;
+}
+
+.footer-content {
+    display: flex;
+    justify-content: space-between;
+}
+
+.logo-contact {
+    display: flex;
+    flex-direction: column;
+    flex: 2;
+    padding: 0 2rem 0 0;
+}
+
+.logo-container {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    margin: 1rem 0;
+}
+
+.logoF {
+    width: 250px;
+}
+
+.contact-container p {
+    display: inline;
+    font-size: 16px;
+}
+
+.contact-container .phoneNo {
+    margin-right: 3rem;
+}
+
+.contact-container .email {
+    margin-left: 3rem;
+}
+
+.contact-container {
+    margin: 2rem 0;
+    align-items: flex-start;
+    justify-content: flex-start;
+}
+
+.address-container {
+    width: 100%;
+    margin-bottom: 2rem;
+}
+
+.address-container p {
+    font-size: 16px;
+    /* text-align: justify !important; */
+}
+
+.company-links {
+    flex: 1;
+    margin: 2rem 1rem;
+}
+
+.link-list {
+    list-style-type: none;
+    margin-top: 1.5rem;
+}
+
+.link-list li {
+    margin: 2rem 0;
+}
+
+.link {
+    color: #ffcc00;
+    text-decoration: none;
+    font-size: 16px;
+}
+
+.subscribe-section {
+    flex: 1;
+    margin: 2rem;
+}
+
+.subscribe-form {
+    display: flex;
+    flex-direction: column;
+    margin: 2rem 0;
+}
+
+.subscribe-input {
+    margin-bottom: 1.5rem;
+    padding: 10px;
+    font-size: 16px;
+    border: none;
+    border-radius: 4px;
+    color: #000;
+}
+
+.subscribe-button {
+    padding: 10px;
+    background-color: #ffcc00;
+    border: none;
+    color: #000;
+    font-size: 16px;
+    cursor: pointer;
+    border-radius: 4px;
+}
+
+.footer-bottom {
+    display: flex;
+    justify-content: space-between;
+    border-top: 1px solid #444;
+    padding-top: 10px;
+}
+
+.footer-bottom p {
+    font-size: 16px;
+}
+
+.footer-links {
+    list-style-type: none;
+    padding: 0;
+    display: flex;
+    gap: 2rem;
+    line-height: 1;
+    text-align: center;
+    
+}
+
+.footer-link {
+    color: #ffcc00;
+    text-decoration: none;
+    font-size: 16px;
+    line-height: 1;
+    text-align: center;
+}
+
+/* Media Queries for Responsive Design */
+@media (max-width: 1200px) {
+
+    .form label {
+        padding: 0 2rem;
+        margin: 0;
+    }
+
+    .form-container {
+        width: 50%;
+    }
+
+    .logoF {
+        width: 250px;
+        align-self: center;
+    }
+
+    .contact-container {
+        display: block;
+        align-self: center;
+        text-align: center;
+        margin: 2rem 0;
+    }
+
+    .contact-container .phoneNo {
+        margin-right: 1rem;
+    }
+    
+    .contact-container .email {
+        margin-left: 1rem;
+    }
+
+    .address-container {
+        text-align: center !important;
+        align-self: center;
+    }
+
+    .address-container p {
+        font-size: 14px;
+    }
+
+    .link-list {
+        margin-top: 2rem;
+    }
+
+    .link-list li {
+        margin: 0.5rem 0;
+    }
+
+    .footer {
+        padding: 40px 80px;
+    }
+}
+
+@media (max-width: 992px) {
+
+    .contact-container p {
+        display: block;
+        margin: 0 !important;
+    }
+
+    .footer {
+        padding: 30px 60px;
+    }
+}
+
+@media (max-width: 768px) {
+
+    .form-container {
+        width: 100%;
+    }
+
+    .footer {
+        padding: 20px 40px;
+    }
+
+    .footer-content {
+        flex-direction: column;
+        align-items: center;
+    }
+
+    .footer-bottom {
+        flex-direction: column;
+        align-items: center;
+    }
+
+    .footer-bottom p {
+        margin: 0.2rem 0 0.7rem 0;
+    }
+
+    .footer-link {
+        font-size: 13px
+    }
+
+    .logo-contact {
+        padding: 0;
+    }
+
+    .logoF {
+        align-self: center;
+    }
+
+    .company-links p {
+        text-align: center;
+    }
+
+    .link-list {
+        text-align: center;
+    }
+
+    .subscribe-section {
+        margin: 1rem;
+    }
+
+    .subscribe-section p {
+        text-align: center;
+    }
+
+    .subscribe-input,
+    .subscribe-button {
+        width: 100%;
+    }
+}
+
+@media (max-width: 576px) {
+
+    .footer {
+        padding: 20px;
+    }
+
+    .footer-content {
+        justify-content: center;
+        text-align: center;
+    }
+
+    .logoF {
+        width: 150px;
+    }
+
+    .contact-container {
+        flex-direction: column;
+        align-items: center;
+        margin: 2rem 0;
+    }
+
+    .contact-container p,
+    .address-container p {
+        /* text-align: center !important; */
+        margin: 0;
+    }
+
+    .address-container {
+        margin-bottom: 1rem;
+    }
+}

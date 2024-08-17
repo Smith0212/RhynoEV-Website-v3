@@ -1,0 +1,64 @@
+.download-the-app{
+    display: flex;
+    flex-direction: row;
+    width: 100%;
+    height: 50vh;
+    justify-content: center;
+    align-items: center;
+    gap: 2rem;
+}
+
+.download-logo-div{
+    width: 45%;
+    display: flex;
+    flex-direction: row;
+    justify-content: flex-end;
+}
+
+.download-logo-div img{
+    width: 50%;
+}
+
+.download-button-div{
+    width: 55%;
+    display: flex;
+    flex-direction: row;
+    justify-content: flex-start;
+}
+
+.store-button {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 250px;
+    border: 2px solid var(--yellow) !important;
+    border-radius: 50px;
+    margin: 10px;
+    padding: 5px 25px;
+    text-decoration: none;
+    color: var(--white);
+    font-size: var(--small) !important;
+}
+
+.download-button-div a{
+    text-decoration: none;
+}
+
+.store-button i {
+    width: 50px;
+    font-size: 2rem;
+}
+
+.store-button.apple i{
+    width: 50px;
+    font-size: 2.5rem;
+}
+
+.store-button .text {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    text-decoration: none;
+}
+
+

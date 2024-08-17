@@ -1,0 +1,16 @@
+.sparkles-container {
+    margin: 10rem 0;
+    overflow: hidden;
+    height: 100vh;
+    width: 100%;
+    display: flex;
+    align-items: center;
+    background-color: #171617;
+}
+
+.particles-container {
+    position: absolute;
+    height: 100vh;
+    width: 100%;
+}
+

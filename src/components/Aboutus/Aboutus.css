@@ -1,0 +1,143 @@
+.about-us-container {
+    display: flex;
+    justify-content: space-between;
+    color: #fff;
+    max-width: 1400px;
+    margin: 2rem auto;
+}
+
+.about-us-content {
+    flex: 2;
+    padding: 0 3rem;
+    border-right: #666 1px solid;
+}
+
+.about-us-content h2 {
+    color: #ffd700;
+    font-size: 54px;
+    margin-bottom: 20px;
+    padding: 0.5rem;
+}
+
+.about-us-content p {
+    margin: 2rem 0;
+    padding: 0.5rem;
+    line-height: 1.6;
+    font-size: 15px;
+    text-align: justify;
+}
+
+.about-us-stats {
+    flex: 1;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    margin: 0 3rem;
+}
+
+.stat-item {
+    display: flex;
+    align-items: center;
+    margin: 2rem 0;
+    text-align: justify;
+}
+
+.stat-percentage {
+    font-size: 36px;
+    font-weight: bold;
+    color: #ffd700;
+    margin-right: 20px;
+}
+
+.stat-text {
+    font-size: 15px;
+}
+
+
+
+@media (max-width: 950px) {
+    .about-us-container {
+        flex-direction: column;
+        padding: 0 5rem;
+    }
+
+    .about-us-content {
+        padding: 0;
+        border-right: none;
+        border-bottom: #666 1px solid;
+    }
+    .about-us-content p {
+        margin: 1.5rem 0;
+    }
+
+    .about-us-stats {
+        margin: 0;
+    }
+
+    .stat-item {
+        margin: 1.5rem 0;
+    }
+}
+
+@media (max-width: 768px) {
+    .about-us-container {
+        padding: 0 4rem;
+    }
+
+    .about-us-content h2 {
+        font-size: 36px;
+        margin-bottom: 10px;
+    }
+
+    .about-us-content p {
+        font-size: 12px;
+        margin: 1rem 0;
+    }
+
+
+    .stat-percentage {
+        font-size: 24px;
+    }
+
+    .stat-text {
+        font-size: 12px;
+    }
+}
+
+@media (max-width: 480px) {
+    .about-us-container {
+        padding: 0 2.3rem;
+    }
+
+    .about-us-content h2 {
+        font-size: 28px;
+    }
+
+    .about-us-content p {
+        font-size: 10px;
+    }
+
+    .stat-item {
+        margin: 1rem 0;
+    }
+
+    .stat-percentage {
+        font-size: 20px;
+    }
+
+    .stat-text {
+        font-size: 10px;
+    }
+}
+
+.border-class{
+    border-bottom: 2px solid var(--black);
+}
+
+.border-class2{
+    border-bottom: 2px solid var(--white);
+}
+
+.outline-class{
+    outline: transparent;
+}

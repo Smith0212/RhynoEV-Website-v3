@@ -1,0 +1,8 @@
+/* .megadivmain{
+    min-height: 100vh;
+    padding: 5rem 1rem;
+} */
+.megadivmain #ourProducts{
+    font-size: var(--heading);
+    text-align: center;
+}

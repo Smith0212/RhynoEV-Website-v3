@@ -1,0 +1,209 @@
+/* Full screen layout */
+.carouselMD {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  height: 100vh;
+  width: 100%;
+  overflow: hidden;
+  position: relative;
+}
+
+.listMD {
+  position: relative;
+  width: 100%;
+  height: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+/* Background RHYNO Text */
+.rhyno-text {
+  position: absolute;
+  margin: 0 auto;
+  top: 5%;
+  font-size: 13vw;
+  font-weight: bold;
+  color: rgba(255, 255, 255, 0.3); /* Initial color (lightly visible) */
+  text-transform: uppercase;
+  z-index: 16;
+  transition: color 0.3s ease;
+  animation: slideDownText 1.5s ease-out forwards;
+}
+
+@keyframes slideDownText {
+  from {
+    top: -50%; /* Final position */
+  }
+}
+
+.itemMD.next ~ .rhyno-text {
+  color: inherit; /* Use the current item's color */
+}
+
+.itemMD {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  z-index: 1;
+  transition: opacity 0.3s ease;
+}
+
+.itemMD.active {
+  z-index: 2;
+}
+
+.itemMD.next {
+  z-index: 3;
+  animation: showNextItem 2.5s forwards;
+}
+
+@keyframes showNextItem {
+  from {
+    clip-path: circle(0% at 50% 50%);
+  }
+  to {
+    clip-path: circle(100% at 50% 50%);
+  }
+}
+
+.imageMD {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin-top: 20vh;
+}
+
+.imageMD img {
+  max-width: 60%;
+  max-height: 60%;
+  opacity: 0; /* Initially hidden */
+  transform: translateY(20px);
+  animation: showImage 1s forwards;
+  animation-delay: 1.8s; /* Delay after the image is visible */
+}
+
+@keyframes showImage {
+  to {
+    opacity: 1; /* Fully visible */
+    transform: translateY(0); /* Final position */
+  }
+}
+
+.color-buttons {
+  position: absolute;
+  bottom: 20px;
+  display: flex;
+  justify-content: center;
+  width: 100%;
+}
+
+.color-buttons button {
+  border: none;
+  width: 40px;
+  height: 40px;
+  margin: 5px;
+  border-radius: 50%;
+  cursor: pointer;
+  transition: transform 0.3s ease;
+  z-index: 15;
+  transition: opacity 0.5s ease;
+  outline: none;
+}
+
+@keyframes showButton {
+  to {
+    opacity: 1; 
+    transform: translateY(0);
+  }
+}
+
+.color-buttons {
+  z-index: 15;
+  opacity: 0;
+  transform: translateY(20px);
+  animation: showButton 1s 2.8s forwards;
+}
+
+.color-buttons button:active {
+  transform: scale(0.85) !important;
+}
+
+.color-buttons button:hover {
+  transform: scale(1.05);
+}
+
+.color-buttons button:disabled {
+  opacity: 0.5;
+  transition: opacity 0.5s ease;
+  pointer-events: none;
+}
+
+/* Add animation to the button when clicked */
+.animate-button {
+  animation: moveButtonToCenter 0.3s forwards;
+}
+
+@keyframes moveButtonToCenter {
+  from {
+    transform: translate(calc(-50% + 20px), calc(-50% + 20px)) scale(1.5);
+    top: 50%;
+    left: 50%;
+  }
+}
+
+/* Responsive adjustments */
+@media (max-width: 1024px) {
+  .rhyno-text {
+    font-size: 15vw;
+    top: 8%;
+  }
+
+  .imageMD img {
+    max-width: 100%;
+    max-height: 100%;
+  }
+
+  .color-buttons button {
+    width: 35px;
+    height: 35px;
+  }
+}
+
+@media (max-width: 768px) {
+  .rhyno-text {
+    font-size: 18vw;
+    top: 20%;
+  }
+
+  .color-buttons button {
+    width: 30px;
+    height: 30px;
+  }
+}
+
+@media (max-width: 480px) {
+  .rhyno-text {
+    font-size: 22vw;
+  }
+
+  .color-buttons button {
+    width: 25px;
+    height: 25px;
+  }
+
+  .color-buttons {
+    margin: 1.5rem 0;
+  }
+
+  .carouselMD {
+    /* padding-bottom: 20px; */
+  }
+}

@@ -1,0 +1,92 @@
+.uni_highlight_info{
+    position: relative;
+    padding: 0rem;
+    /* float: left; */
+    left: 50%;
+    width: 50%;
+    max-width: 720px;
+}
+.uni_highlight_info .uni_highlight_infoo{
+    margin-left: -100%;
+    max-width: 200%;
+}
+.uni_highlight_info .uni_highlight_infoo .uni_highlight_info_box{
+    background: #191919;
+    border-radius: 8px;
+    color: #fff;
+    margin-top: -64px;
+    margin-bottom: 60px;
+    display: -webkit-box;
+    display: -webkit-flex;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-flex-direction: row;
+    -ms-flex-direction: row;
+    flex-direction: row;
+    flex-wrap: wrap;
+    margin-left: 64px;
+    margin-right: 64px;
+}
+.uni_highlight_info .uni_highlight_infoo .uni_highlight_info_box .uni_info{
+    position: relative;
+    margin: 32px 0;
+    padding: 16px 64px;
+   
+    flex: 1;
+    display: -webkit-box;
+    display: -webkit-flex;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-flex-direction: row;
+    -ms-flex-direction: row;
+    flex-direction: row;
+    border-right: 1px solid #636363;
+    -webkit-align-items: center;
+    -webkit-box-align: center;
+    -ms-flex-align: center;
+    align-items: center;
+}
+.uni_highlight_info .uni_highlight_infoo .uni_highlight_info_box .border11{
+    border: 0;
+}
+.uni_highlight_info .uni_highlight_infoo .uni_highlight_info_box .uni_info .uni_persentage{
+    font-size: var(--medium);
+    font-weight: 600!important;
+    line-height: 40px!important;
+    margin-right: 16px;
+
+}
+.uni_highlight_info .uni_highlight_infoo .uni_highlight_info_box .uni_info .uni_persentage .uni_sub_info{
+    
+    font-weight: 400;
+    font-size: var(--para);
+    line-height: 19px!important;
+}
+/* .uni_highlight_info .uni_highlight_infoo .uni_highlight_info_box .none{
+    border: 0;
+    border-right: 0;
+} */
+
+@media (max-width:1200px) {
+    .uni_highlight_info .uni_highlight_infoo .uni_highlight_info_box{
+        flex-direction: column;
+        -webkit-flex-direction: column;
+        -ms-flex-direction: column;
+    }
+    .uni_highlight_info .uni_highlight_infoo .uni_highlight_info_box .uni_info{
+        border: 0;
+        /* border-bottom: 1px solid #636363; */
+    }
+    .uni_highlight_info .uni_highlight_infoo .uni_highlight_info_box .none{
+        border: 0;
+    }
+}
+
+@media (max-width:550px){
+    .uni_highlight_info .uni_highlight_infoo .uni_highlight_info_box .uni_info{
+        gap: 0.8rem;
+        -webkit-flex-direction: column;
+        -ms-flex-direction: column;
+        flex-direction: column;
+    }
+}
