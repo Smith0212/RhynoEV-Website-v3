@@ -61,7 +61,7 @@ function FAQ() {
 
     return (
         <div className='bg-white'>
-        <div className="max-w-3xl mx-auto mt-28 mb-10 p-4">
+        <div className="max-w-3xl mx-auto mt-10 mb-10 p-4">
             <h2 className="text-3xl font-semibold text-center mb-4 text-gray-600">Frequently Asked Questions</h2>
             <p className="text-center text-gray-600 mb-6">Everything you need to know about the product and billing.</p>
             {faqData.map((faq, index) => (
@@ -87,14 +87,14 @@ function FAQ() {
                     </div>
                 </div>
             ))}
-            <div className="bg-gray-100 p-6 mt-10 text-center rounded-md shadow-md">
+            {/* <div className="bg-gray-100 p-6 mt-10 text-center rounded-md shadow-md">
                 <p className="text-lg mb-4 text-gray-600">Still have Questions?</p>
                 <p className="text-gray-600 mb-6">Join over 4000+ startups already growing with Us.</p>
                 <div className="flex justify-center space-x-4">
                     <button className="bg-gray-800 text-white py-2 px-6 rounded-full hover:bg-gray-700">Learn More</button>
                     <button className="bg-gray-200 text-gray-800 py-2 px-6 rounded-full hover:bg-gray-300">Contact us</button>
                 </div>
-            </div>
+            </div> */}
         </div>
         </div>
     );

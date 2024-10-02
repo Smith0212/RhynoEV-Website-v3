@@ -1,0 +1,122 @@
+.container77 {
+    width: 100%;
+    padding: 40px 0;
+    position: relative;
+    font-family: var(--poppins);
+  }
+  
+  .slide-container77 {
+    margin: 0 30px;
+    overflow-x: scroll;
+    display: flex;
+    scroll-behavior: smooth;
+    scrollbar-width: none; /* For Firefox */
+  }
+  
+  .slide-container77::-webkit-scrollbar {
+    display: none; /* For Chrome, Safari, and Opera */
+  }
+  
+  .card-wrapper77 {
+    display: flex;
+    gap: 20px;
+  }
+  
+  .card77 {
+    background: var(--dark-grey);
+    border: 1px solid var(--light-grey);
+    border-radius: 8px;
+    padding: 20px;
+    min-width: calc(100% / 4 - 20px); /* Shows 4 cards at once */
+    height: 400px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: space-between; /* Adjusts spacing between elements */
+    text-align: center; /* Center aligns text within the card */
+  }
+  
+  .card77 .image-box77 {
+    width: 50px;
+    height: 50px;
+  }
+  
+  .card77 .image-box77 img {
+    width: 100%;
+    height: 100%;
+    border-radius: 8px 8px 0 0;
+    margin-bottom: 1.2rem;
+  }
+  
+  .card77 .profile-details77 {
+    display: flex;
+    flex-direction: column; /* Stack items vertically */
+    align-items: center;
+    padding: 15px;
+    flex: 1;
+    justify-content: flex-start;
+    width: 100%;
+  }
+  
+  .card77 .profile-details77 img {
+    height: 50px;
+    width: 50px;
+    border-radius: 50%;
+  }
+  
+  .profile-details77 .name77 {
+    font-size: 18px;
+    font-weight: 500;
+    margin-bottom: 1rem;
+    margin-top: 1rem;
+    text-align: center;
+    white-space: nowrap; /* Prevent text from wrapping */
+    overflow: hidden; /* Hide overflow text */
+    text-overflow: ellipsis; /* Add ellipsis for overflow text */
+  }
+  
+  .profile-details77 .job77 {
+    font-size: 14px;
+    font-weight: 500;
+    color: var(--white);
+    text-align: justify;
+    margin-bottom: 0.5rem;
+    max-height: 100%; /* Limit the height of the job title */
+    overflow: hidden; /* Hide any overflow content */
+    text-overflow: ellipsis; /* Add ellipsis for overflow text */
+  }
+  
+  .swiper-navBtn77 {
+    color: #000;
+    height: 40px;
+    width: 40px;
+    background: #fff;
+    border-radius: 50%;
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    cursor: pointer;
+    z-index: 10;
+  }
+  
+  .swiper-button-prev77 {
+    left: 10px;
+  }
+  
+  .swiper-button-next77 {
+    right: 10px;
+  }
+  
+  @media screen and (max-width: 768px) {
+    .card-wrapper77 {
+      gap: 10px;
+    }
+  
+    .card77 {
+      min-width: calc(100% / 4 - 10px); /* Shows 2 cards at once */
+    }
+  }
+  

@@ -21,6 +21,9 @@ import Modelpage_L1 from '../components/Modelpage_L1/Modelpage_L1';
 import Modelpage_L2 from '../components/Modelpage_L2/Modelpage_L2';
 import Modelpage_L3 from '../components/Modelpage_L3/Modelpage_L3';
 import Modelpage_L4 from '../components/Modelpage_L4/Modelpage_L4';
+import ContactForm from '../components/ContactNew/ContactForm';;
+import { Helmet } from 'react-helmet';
+
 
 
 const SE03LITE = () => {
@@ -78,6 +81,10 @@ const SE03LITE = () => {
 
   return (
     <div>
+      <Helmet>
+        <title>SE03 Lite</title>
+        <meta name="description" content="Know more about SE03 Lite" />
+      </Helmet>
       {/* <Prodland/> */}
       {/* <Model_L1
         mainImgsByColor={mainImgsByColor}
@@ -89,10 +96,11 @@ const SE03LITE = () => {
         maxSpeed={maxSpeed}
       /> */}
 
-      <Modelpage_L1 startState={2} />
       <Modelpage_L2 />
+      <Modelpage_L1 startState={2} />
       <Modelpage_L3 specifications={rhynoSpecLite} />
       <Modelpage_L4 />
+      <ContactForm/>
       
       {/* <Spec w="1500W" tops="55" range="100" battery="1.8" imges={Img12} /> */}
     </div>

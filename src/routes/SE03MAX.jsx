@@ -21,6 +21,9 @@ import Modelpage_L1 from '../components/Modelpage_L1/Modelpage_L1';
 import Modelpage_L2 from '../components/Modelpage_L2/Modelpage_L2';
 import Modelpage_L3 from '../components/Modelpage_L3/Modelpage_L3';
 import Modelpage_L4 from '../components/Modelpage_L4/Modelpage_L4';
+import ContactForm from '../components/ContactNew/ContactForm'
+import { Helmet } from 'react-helmet';
+
 
 
 const SE03MAX = () => {
@@ -78,6 +81,10 @@ const SE03MAX = () => {
 
   return (
     <div>
+      <Helmet>
+        <title>SE03 MAX</title>
+        <meta name="description" content="Know more about SE03 Max" />
+      </Helmet>
       {/* <Prodland/> */}
       {/* <Model_L1
         mainImgsByColor={mainImgsByColor}
@@ -89,10 +96,11 @@ const SE03MAX = () => {
         maxSpeed={maxSpeed}
       /> */}
 
-      <Modelpage_L1 startState={1} />
       <Modelpage_L2 />
+      <Modelpage_L1 startState={1} />
       <Modelpage_L3 specifications={rhynoSpecMax} />
       <Modelpage_L4 />
+      <ContactForm/>
 
       {/* <Spec w="2000W" tops="65" range="120" battery="2.7" imges={Img12} /> */}
     </div>

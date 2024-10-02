@@ -81,6 +81,7 @@ const Slider = () => {
       onTouchStart={handleTouchStart}
       onTouchMove={handleTouchMove}
       onTouchEnd={handleTouchEnd}
+      id='rotatememe'
     >
       <button className="nav-button left-button" onClick={goToPreviousPage}>◀</button>
       <button className="nav-button right-button" onClick={goToNextPage}>▶</button>

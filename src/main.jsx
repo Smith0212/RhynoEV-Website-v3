@@ -1,5 +1,5 @@
 import React, { useState, useEffect } from 'react';
-import ReactDOM from 'react-dom/client'
+import ReactDOM from 'react-dom/client';
 import App from './App.jsx'
 import './index.css'
 import { BrowserRouter, Route, Routes, Navigate, useLocation } from 'react-router-dom';
@@ -17,20 +17,22 @@ import SE03LITE from './routes/SE03LITE.jsx'
 import Rentals from './routes/Rentals.jsx';
 import PrivacyPolicy from './routes/PrivacyPolicy.jsx';
 import CareersPage from './routes/CareersPage.jsx';
-import ContactForm from './components/ContactForm/ContactForm.jsx';
+import ContactFormTop from "./components/ContactNew/ContactForm.jsx";
+import ContactFormBottom from './components/ContactForm/ContactForm.jsx';
 import FooterNew from './components/footer/FooterNew.jsx';
 import FAQ from './components/faq/Faq.jsx';
 import Faqs from './routes/Faqs.jsx';
+import Refund from './routes/Refund.jsx';
+import Terms from './routes/Terms.jsx';
 
 
-const Root = () => {
   // const [isLoading, setIsLoading] = useState(false);
 
   // const handleLoadingComplete = () => {
   //   setIsLoading(false);
   // };
 
-  return (
+  ReactDOM.createRoot(document.getElementById('root')).render (
     <BrowserRouter>
       {/* {isLoading ? (
         <PreLoader onComplete={handleLoadingComplete} />
@@ -41,7 +43,7 @@ const Root = () => {
           <Routes>
             <Route path='/' element={<App />} />
             <Route path='*' element={<Navigate to="/" />} />
-            <Route path='/SE03' element={<SE03/>}/>
+            <Route path='/SE03' element={<SE03 />}/>
             <Route path='/SE03MAX' element={<SE03MAX/>}/>
             <Route path='/SE03LITE' element={<SE03LITE/>}/>
             <Route path='/Compare' element={<Compare />} />
@@ -50,9 +52,12 @@ const Root = () => {
             <Route path='/Rentals' element={<Rentals />} />
             <Route path='/Privacy' element={<PrivacyPolicy />} />
             <Route path='/Careers' element={<CareersPage />} />
-            <Route path='/FAQ' element={<Faqs />} />
+            <Route path='/Contact-us' element={<Faqs />} />
+            <Route path='/Refund' element={<Refund />} />
+            <Route path='/Terms' element={<Terms />} />
           </Routes>
-          <ContactForm />
+          {/* <ContactFormTop /> */}
+          <ContactFormBottom />
           {/* <Footer /> */}
           {/* <FooterNew /> */}
           <BackToTop />
@@ -60,10 +65,3 @@ const Root = () => {
       {/* )} */}
     </BrowserRouter>
   );
-};
-
-ReactDOM.createRoot(document.getElementById('root')).render(
-  // <React.StrictMode>
-    <Root />
-  // </React.StrictMode>
-);

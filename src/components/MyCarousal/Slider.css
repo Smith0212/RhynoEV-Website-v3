@@ -202,12 +202,12 @@
  }
 
  .js-scrolling__page-1 .slider-page--right .slider-page__content {
-     background-image: url("../../assets/Product1.png");
+     background-image: url("../../assets/h2.webp");
  }
 
  .js-scrolling__page-1 .slider-page--left .slider-page__content {
      /* background: linear-gradient(100deg, rgba(253, 50, 50, 1), rgba(246, 47, 47, 1), rgba(37, 37, 37, 1) 80%); */
-     background-image: url("../../assets/img1.jpg");
+     background-image: url("../../assets/h1.webp");
      background-size: cover;
      background-position: 95%;
      cursor: pointer;
@@ -268,17 +268,17 @@
  }
 
  .js-scrolling__page-2 .slider-page--left .slider-page__content {
-     background-image: url("../../assets/Product2.png");
+     background-image: url("../../assets/h2.webp");
      margin-left: -2.5rem;
  }
 
  .js-scrolling__page-3 .slider-page--right .slider-page__content {
-     background-image: url("../../assets/product3.png");
+     background-image: url("../../assets/h3.webp");
  }
 
  .js-scrolling__page-3 .slider-page--left .slider-page__content {
      /* background: linear-gradient(100deg, rgb(24, 17, 240), rgba(44, 38, 241, 0.6), rgba(37, 37, 37, 0.1) 80%); */
-     background-image: url("../../assets/img1.jpg");
+     background-image: url("../../assets/h4.webp");
      background-size: cover;
      background-position: 95%;
      cursor: pointer;

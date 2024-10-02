@@ -2,6 +2,7 @@ import React, { useState, useEffect } from 'react';
 import './Navbar.css';
 import Logo from "../../assets/Logo.png";
 import { Link } from 'react-router-dom';
+import Formmain from '../popupform/Formmain';
 
 const Navbar = () => {
   const [isSearchOpen, setSearchOpen] = useState(false);
@@ -84,13 +85,19 @@ const Navbar = () => {
                 SE03 LITE
               </Link>
             </li>
+            <li>
+              <Link to="/Compare" onClick={() => { closeNav(); handleClick(); }}>
+                Compare
+              </Link>
+            </li>
           </ul>
         </li>
-        <li><Link to="/Compare" onClick={() => { closeNav(); handleClick(); }}>Compare</Link></li>
+        <li><Link to="/Rentals" onClick={() => { closeNav(); handleClick(); }}>Rentals</Link></li>
         <li><Link to='/AboutUs' onClick={() => { closeNav(); handleClick(); }}>About Us</Link></li>
-        <li><Link to='/ContactUs' onClick={() => { closeNav(); handleClick(); }}>Contact Us</Link></li>
+        <li><Link to='/Contact-us' onClick={() => { closeNav(); handleClick(); }}>Contact Us</Link></li>
       </ul>
-      <button className="search-icon btn btn-nav" id="searchIcon"><a href="https://wa.me/9023987528" target='_blank'> Order Now </a></button>
+      {/* <button className="search-icon btn btn-nav" id="searchIcon"><a href="https://wa.me/9023987528" target='_blank'> Order Now </a></button> */}
+      <Formmain />
       <i className="fas fa-bars navOpenBtn" onClick={openNav} id="nav-toggler"></i>
     </nav>
   );

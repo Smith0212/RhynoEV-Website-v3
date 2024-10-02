@@ -61,20 +61,21 @@ const ContactForm = () => {
                             <p className='email'><i class="fa-regular fa-envelope mr-2"></i> info@Rhyno.in</p>
                         </div>
                         <div className="address-container">
-                            <p>Rhyno Wheels Private Limited,
-                                UG Hostel Gate 2,<br /> Behind PDEU, Raisan,
-                                Gandhinagar, Gujarat
+                            <p>Rhyno Wheels Private Limited, 05, Jay Industrial Park, Nana Chiloda Ring Road Circle,  Muthiya, Ahmedabad, Gujarat, India. 382330.
                             </p>
                         </div>
                     </div>
                     <div className="company-links">
                         <p>Company</p>
                         <ul className="link-list">
-                            <li><Link to="/FAQ" className="link" onClick={handleClick}>FAQ</Link></li>
+                            <li><Link to="/Contact-us" className="link" onClick={handleClick}>Contact US</Link></li>
                             <li><Link to="/Careers" className="link" onClick={handleClick}>Careers</Link></li>
-                            <li><Link to="/ContactUs" className="link" onClick={handleClick}>Contact Us</Link></li>
+                            {/* <li><Link to="/ContactUs" className="link" onClick={handleClick}>Contact Us</Link></li> */}
                             <li><Link to="/Privacy" className="link" onClick={handleClick}>Privacy Policy</Link></li>
                             <li><Link to="/Rentals" className="link" onClick={handleClick}>Rentals</Link></li>
+                            <li><Link to="/Refund" className="link" onClick={handleClick}>Refund Policy</Link></li>
+                            <li><Link to="/Terms" className="link" onClick={handleClick}>Terms of Service</Link></li>
+                            <li><Link to="/Rentals" className="link" onClick={handleClick}>Media</Link></li>
                         </ul>
                     </div>
                     <div className="subscribe-section">

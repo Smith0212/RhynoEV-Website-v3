@@ -1,8 +1,8 @@
 import React, { useState, useRef, useEffect } from 'react';
 import { useNavigate } from 'react-router-dom';
-import Img1 from '../../assets/webp/Product1.webp';
-import Img2 from '../../assets/webp/Product2.webp';
-import Img3 from '../../assets/webp/product3.webp';
+import Img1 from '../../assets/h1.png';
+import Img2 from '../../assets/h2.png';
+import Img3 from '../../assets/h3.png';
 // import rightArrow from './right-arrow1.svg';
 // import leftArrow from './left-arrow1.svg';
 import { IoIosArrowDropleft } from "react-icons/io";
@@ -85,9 +85,27 @@ const OurProducts = () => {
     };
 
     const handleCheckout = (to) => {
-        window.scrollTo(0, 0);
-        navigate(to);
+        const scrollToTop = () => {
+            return new Promise((resolve) => {
+                const scrollListener = () => {
+                    if (window.scrollY === 0) {
+                        window.removeEventListener('scroll', scrollListener);
+                        resolve();
+                    }
+                };
+
+                window.scrollTo(0, 0);
+
+                window.addEventListener('scroll', scrollListener);
+            });
+        };
+
+        scrollToTop().then(() => {
+            // Navigate to the new page after scrolling to the top
+            navigate(to);
+        });
     };
+
 
     useEffect(() => {
         const seeMoreButtons = carouselRef.current.querySelectorAll('.seeMoreBtn');
@@ -102,18 +120,18 @@ const OurProducts = () => {
     const hasRun = useRef(false); // Track if the effect has already run
 
     useEffect(() => {
-        const handleEnter = () => {
-            showSlider('prev');
-            setTimeout(() => {
-                showSlider('prev');
-                setTimeout(() => {
-                    showSlider('prev');
-                    setTimeout(() => {
-                        showSlider('next');
-                    }, 2000);
-                }, 2000);
-            }, 2000);
-        };
+        // const handleEnter = () => {
+        //     showSlider('prev');
+        //     setTimeout(() => {
+        //         showSlider('prev');
+        //         setTimeout(() => {
+        //             showSlider('prev');
+        //             setTimeout(() => {
+        //                 showSlider('next');
+        //             }, 2000);
+        //         }, 2000);
+        //     }, 2000);
+        // };
 
         // Intersection Observer callback
         const handleIntersection = (entries) => {
@@ -151,7 +169,7 @@ const OurProducts = () => {
     }, [currentIndex]);
 
     return (
-        <div className="prodContainer" ref={componentRef}>
+        <div className="prodContainer" ref={componentRef} id='learnmore'>
             <div className="vertical-menu">
                 {['RHYNO', `RHYNO MAX`, 'RHYNO LITE'].map((item, index) => (
                     <div
@@ -169,17 +187,17 @@ const OurProducts = () => {
                 <div className="list" ref={listRef}>
                     {products.map((product, index) => (
                         <div className="item" key={index}>
-                                <img src={product.image} alt={product.topic} />
+                            <img src={product.image} alt={product.topic} />
                             {/* <div className="intro-container"> */}
-                                <div className="introductionText">
-                                    <div className="topic">{product.topic}</div>
-                                    <div className="des">{product.description}</div>
-                                    <button className="seeMoreBtn">SEE MORE &#8599;</button>
-                                </div>
+                            <div className="introductionText">
+                                <h1 className="topic">{product.topic}</h1>
+                                <p className="des">{product.description}</p>
+                                <button className="seeMoreBtn">SEE MORE &#8599;</button>
+                            </div>
                             {/* </div> */}
                             <div className="productDetail">
-                                <div className="title">{product.detailTitle}</div>
-                                <div className="des">{product.detailDescription}</div>
+                                <h1 className="title">{product.detailTitle}</h1>
+                                <p className="des">{product.detailDescription}</p>
                                 <div className="specifications">
                                     {product.specifications.map((spec, index) => (
                                         <div key={index}>
@@ -189,17 +207,20 @@ const OurProducts = () => {
                                     ))}
                                 </div>
                                 <div className="checkout">
-                                    <button onClick={() => handleCheckout(products.nevigatTo)}>CHECKOUT</button>
+                                    <button className='buttonCh back' onClick={handleBackClick}>
+                                        See All &#8599;
+                                    </button>
+                                    <button className='buttonCh' onClick={() => handleCheckout(product.nevigatTo)}>CHECKOUT</button>
                                 </div>
                             </div>
                         </div>
                     ))}
                 </div>
-                <div className="arrows">
+                {/* <div className="arrows">
                     <button id="back" onClick={handleBackClick}>
                         See All &#8599;
                     </button>
-                </div>
+                </div> */}
             </div>
         </div>
     );

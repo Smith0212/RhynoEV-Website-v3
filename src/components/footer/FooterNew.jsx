@@ -67,8 +67,7 @@ function FooterNew() {
               />
             </div>
             <div className="flex-auto text-base tracking-normal leading-5 text-white capitalize">
-              Rhyno Wheels Private Limited , <br />
-              UG Hostel Gate 2 , Behind PDEU , Raisan , Gandhinagar , Gujarat{" "}
+            Rhyno Wheels Private Limited, 05, Jay Industrial Park, Nana Chiloda Ring Road Circle,  Muthiya, Ahmedabad, Gujarat, India. 382330.
             </div>
           </div>
         </div>

@@ -1,0 +1,7 @@
+
+User-agent: *
+Disallow: /private/
+Disallow: /tmp/
+Allow: /
+
+Sitemap: https://rhyno_ev_v2.web.app/sitemap.txt

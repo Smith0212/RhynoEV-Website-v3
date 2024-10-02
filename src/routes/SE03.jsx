@@ -23,6 +23,10 @@ import Modelpage_L1 from '../components/Modelpage_L1/Modelpage_L1';
 import Modelpage_L2 from '../components/Modelpage_L2/Modelpage_L2';
 import Modelpage_L3 from '../components/Modelpage_L3/Modelpage_L3';
 import Modelpage_L4 from '../components/Modelpage_L4/Modelpage_L4';
+import ContactForm from '../components/ContactNew/ContactForm';
+import VehicleStats from '../components/stats/VehicleStats';
+import { Helmet } from 'react-helmet';
+
 
 
 
@@ -79,6 +83,7 @@ const SE03 = () => {
   ];
 
   const { state } = useLocation();
+  
 
   useEffect(() => {
       if (state?.scrollToTop) {
@@ -93,6 +98,10 @@ const SE03 = () => {
 
   return (
     <div>
+      <Helmet>
+        <title>SE03</title>
+        <meta name="description" content="Know more about SE03" />
+      </Helmet>
       {/* <Prodland/> */}
       {/* <Model_L1
         mainImgsByColor={mainImgsByColor}
@@ -104,11 +113,11 @@ const SE03 = () => {
         maxSpeed={maxSpeed}
       /> */}
 
-      <Modelpage_L1 startState={3} />
       <Modelpage_L2 />
+      <Modelpage_L1 startState={3} />
       <Modelpage_L3 specifications={rhynoSpec} />
       <Modelpage_L4 /> 
-
+      <ContactForm/>
 
       {/* <Spec 
         w="1500W" tops="55" range="150" battery="2.7" imges={Img12}

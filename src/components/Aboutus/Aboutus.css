@@ -141,3 +141,24 @@
 .outline-class{
     outline: transparent;
 }
+
+.btnabout{
+  width: max-content;
+  letter-spacing: 2px;
+  text-transform: uppercase;
+  font-weight: 600;
+  background: var(--yellow);
+  font-size: var(--small);
+  padding: .7rem 1.2rem;
+  border: none;
+  color: var(--black);
+  text-decoration: none;
+  text-shadow: none;
+  border-radius: 5px;
+  cursor: pointer;
+  transition: opacity 0.5s ease, transform 0.5s;
+}
+
+.btnabout:hover{
+    background: var(--yellow-hover);
+}

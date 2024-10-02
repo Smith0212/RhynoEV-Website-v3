@@ -53,7 +53,7 @@ function Rotate() {
     'We’ve had enough of the EVs being fragile plastic toys that break during minor accidents, spending weeks at service stations. We took the bold step of making something raw and rugged. We kept it so simple that even your trusted local mechanic can understand and repair your Rhyno.',
   ];
   const headings = [
-    'LFP Battery',
+    'Long Lasting Battery',
     'Wider Tyres',
     'Range Prediction',
     'Extraordinary Experience',

@@ -1,75 +1,68 @@
-.tableMD {
-  width: 80%;
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@400;600;700&display=swap');
+
+.table {
+  width: 70%; /* Set the width of the table */
   margin: 2rem auto;
-  box-shadow: 0 10px 16px rgba(0, 0, 0, 0.9);
 }
 
-.table-containerMD {
+.table-container {
   margin-top: 2px;
-  padding: 0;
+  padding: 10px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
   overflow-x: auto;
 }
 
-.table-containerMD .MuiTableCell-root {
-  font-family: var(--poppins);
-  padding: 16px;
-  font-size: 1em;
+.table-container .MuiTableCell-root {
+  font-family: 'Poppins', sans-serif;
+  padding: 10px;  /* Set the height of each cell */
+  font-size: 0.9em;  /* Adjust font size for better readability */
   background-color: #2C2A2A;
   color: #FFFFFF;
-  text-align: left;
-  border: 1px solid #2C2A2A;
+  text-align: center;
+  border: 1px solid #FFFFFF;  /* Set border color to white */
 }
 
-.spec-cellMD {
-  background-color: #000000;
-  color: #F9ED32 !important;
+.header-cell {
+  background-color: #F9ED32;
+  color: #000000;
+  font-family: 'Poppins', sans-serif;
+  font-size: larger;
+  font-weight: bold;
+  text-align: center;
+  border: 1px solid #FFFFFF;  /* White border for consistency */
+}
+
+.spec-cell {
+  background-color: #F9ED32;
+  color: #000000;
   font-family: 'Poppins', sans-serif;
   font-weight: bold;
-  width: 30%;
+  border: 1px solid #FFFFFF;  /* White border */
 }
 
-.data-cellMD {
+.data-cell {
   background-color: #2C2A2A;
   color: #FFFFFF;
   font-family: 'Poppins', sans-serif;
-  width: 70%;
-  /* border: 1px solid #2C2A2A; */
+  border: 1px solid #FFFFFF;  /* White border */
   transition: background-color 0.3s ease, color 0.3s ease;
 }
 
-.highlight-row .spec-cellMD {
-  background-color: #434343;
-  color: whitesmoke;
-  letter-spacing: 0.5px;
-}
-
-.highlight-row .data-cellMD {
-  background-color: #434343;
-  color: whitesmoke;
-  letter-spacing: 0.5px;
-}
-
-.table-containerMD .MuiTableRow-root:hover .data-cellMD {
+.table-container .MuiTableRow-root:hover .data-cell {
   font-weight: bold;
-  background-color: #F9ED32;
+  background-color: #bababa;  /* Updated hover color */
   color: #000000;
-  border: 1px solid black;
+  border: 1px solid #FFFFFF;  /* Keep the border white on hover */
 }
 
-.table-containerMD .MuiTableRow-root:hover .spec-cellMD {
-  font-weight: bold;
-  /* background-color: #F9ED32; */
-  /* color: #000000; */
-  border: 1px solid black;
-}
-
+/* Responsiveness */
 @media (max-width: 768px) {
-  .table-containerMD .MuiTableCell-root {
-    padding: 12px;
-    font-size: 0.9em;
+  .table-container .MuiTableCell-root {
+    padding: 8px;  /* Further reduce padding for smaller screens */
+    font-size: 0.8em;  /* Adjust font size for smaller screens */
   }
 
-  .spec-cellMD {
-    font-size: 0.9em;
+  .header-cell {
+    font-size: 1em;
   }
 }

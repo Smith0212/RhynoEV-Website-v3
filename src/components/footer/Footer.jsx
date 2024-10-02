@@ -21,7 +21,8 @@ const Footer = () => {
             </div>
             <div className="ft-add">
               <small>Visit us</small>
-              <p>RHYNO Wheels Private limited, Near UG hostel gate #2, Behind PDEU, Raisan, Gandhinagar, Gujarat, India.</p>
+              <p>Rhyno Wheels Private Limited, 05, Jay Industrial Park, Nana Chiloda Ring Road Circle,  Muthiya, Ahmedabad, Gujarat, India. 382330.
+              </p>
             </div>
             <div className="ft-lets">
               <small>Lets connect</small>
