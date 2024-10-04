@@ -8,17 +8,27 @@ const Modelpage_L4 = () => {
     return (
         <div className="custom-bike-layout">
             <div className="custom-top-section">
-                <div className="custom-image-container">
-                    <img src={Img1} alt="Image 1" className="custom-top-image" />
-                    <p className="custom-description-text">
-                        LOREM IPSUM IS SIMPLY DUMMY TEXT OF THE PRINTING AND TYPESETTING INDUSTRY.
-                    </p>
+                <div className="custom-video-container">
+                    <iframe
+                        width="560"
+                        height="315"
+                        src="https://www.youtube.com/embed/HKfZifYO2w4"
+                        title="YouTube video player"
+                        frameBorder="0"
+                        allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
+                        allowFullScreen
+                    ></iframe>
                 </div>
-                <div className="custom-image-container">
-                    <img src={Img2} alt="Image 2" className="custom-top-image" />
-                    <p className="custom-description-text">
-                        LOREM IPSUM IS SIMPLY DUMMY TEXT OF THE PRINTING AND TYPESETTING INDUSTRY.
-                    </p>
+                <div className="custom-video-container">
+                    <iframe
+                        width="560"
+                        height="315"
+                        src="https://www.youtube.com/embed/-41dJi_UPlc"
+                        title="YouTube video player"
+                        frameBorder="0"
+                        allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
+                        allowFullScreen
+                    ></iframe>
                 </div>
             </div>
             <div className="custom-bike-row">
